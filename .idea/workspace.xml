@@ -1,18 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="59f8b609-39dc-4b23-af48-875d108cfb70" name="Changes" comment="" />
+    <list default="true" id="59f8b609-39dc-4b23-af48-875d108cfb70" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/json-20231013.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/activeSA1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ball.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/coin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/fly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/fonts/Bubbly Frog Hollow.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/fonts/BubblyFrog.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/fonts/TOADFROG.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/icon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/lifesico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/locked/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/locked/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/locked/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/locked/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/locked/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/locked/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/locked/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/locked/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/locked/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/locked/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/locked/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/locked/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/locked/base.kra" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/locked/base.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/notActiveSA1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/numbers/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/numbers/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/numbers/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/numbers/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/numbers/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/numbers/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/numbers/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/numbers/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/numbers/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/numbers/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/numbers/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/numbers/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sounds/explosion.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/sounds/playerShoot.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ui/blue_boxCheckmark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ui/blue_boxCross.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ui/blueb1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ui/green_boxCheckmark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ui/green_checkmark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ui/green_circle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ui/grey_button07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ui/greyb1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ui/ok_button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ui/orangeb1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ui/red_boxCross.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/ui/red_cross.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/wasp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/clases/Window.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/Animation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/Assets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/Loader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graphics/Text.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/input/MouseGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/states/MenuState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/states/State.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/Action.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2buzpsa1qBJZEWkfGbbJ2qGRWNh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -23,9 +101,24 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Alex/Desktop/jojo-bird"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex\Desktop\jojo-bird" />
+      <recent name="C:\Users\Alex\Desktop\jojo-bird\src" />
+      <recent name="C:\Users\Alex\Desktop\jojo-bird\src\ui" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alex\Desktop\jojo-bird\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ui" />
+      <recent name="input" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
