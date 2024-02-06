@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 
 public class Assets {
 
-    public static BufferedImage player;;
+    public static BufferedImage player;
     public static BufferedImage orangeButtSQ, blueButtRec, greyButtonRec, greenCheckButt, redcrossButt, bluecrossButt, bluecheckButt, greyButtonSQ;
 
     public static Font titleFontBig, titleFontMedium, titleFontTiny;
@@ -15,6 +15,7 @@ public class Assets {
     public static Clip explosion, playerShoot;
 
     public static void init(){
+        player = Loader.ImageLoader("/player/player.png");
         orangeButtSQ = Loader.ImageLoader("/ui/orangeb1.png");
         greyButtonSQ = Loader.ImageLoader("/ui/grey_button07.png");
         blueButtRec = Loader.ImageLoader("/ui/blueb1.png");

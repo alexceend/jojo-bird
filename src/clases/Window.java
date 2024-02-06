@@ -1,5 +1,6 @@
 package clases;
 
+import graphics.Assets;
 import states.MenuState;
 import states.State;
 
