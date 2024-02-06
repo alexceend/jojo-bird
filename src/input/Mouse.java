@@ -34,10 +34,4 @@ public class Mouse implements MouseListener {
         CLICKING = false;
     }
 
-    public static Point getPos() {
-        //return e.getX();
-        //return x;
-        return MouseInfo.getPointerInfo().getLocation().getLocation();
-    }
-
 }

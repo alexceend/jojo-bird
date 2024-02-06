@@ -12,7 +12,6 @@ import java.awt.image.BufferedImage;
 public class Player extends MovingObject{
     private final Canvas canvas = Window.instance.getCanvas();
     private boolean vivo = true;
-    private int x, y;
     public static boolean paused = false;
 
     public Player(Point center, BufferedImage texture, GameState gameState){
@@ -23,11 +22,10 @@ public class Player extends MovingObject{
 
     @Override
     public void update() {
-
-        if(Mouse.CLICKING && y < 0){
-            y--;
-        }else if(y > canvas.getHeight()) {
-            y++;
+        if(Mouse.CLICKING && this.center.getY() > 0){
+            center.setLocation(center.getX(), center.getY()-5);
+        }else if(this.center.getY() < canvas.getHeight()) {
+            center.setLocation(center.getX(), center.getY()+5);
         }
     }
 

@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59f8b609-39dc-4b23-af48-875d108cfb70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/clases/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gameObjects/Chronometer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gameObjects/GameObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gameObjects/MovingObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gameObjects/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/graphics/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/input/Mouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/math/Vector2D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/states/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/clases/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/clases/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Assets.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/states/MenuState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/states/MenuState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameObjects/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameObjects/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/input/Mouse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,14 +33,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Alex/Desktop/jojo-bird/src"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Alex/Desktop/jojo-bird/src&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Alex\Desktop\jojo-bird\src" />
