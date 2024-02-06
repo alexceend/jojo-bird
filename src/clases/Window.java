@@ -75,6 +75,7 @@ public class Window extends JFrame implements Runnable {
     }
 
     private void init() {
+        Assets.init();
         State.changeState(new MenuState());
     }
 

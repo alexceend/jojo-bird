@@ -15,7 +15,7 @@ public class Assets {
     public static Clip explosion, playerShoot;
 
     public static void init(){
-        player = Loader.ImageLoader("/player/player.png");
+        player = Loader.ImageLoader("/player.png");
         orangeButtSQ = Loader.ImageLoader("/ui/orangeb1.png");
         greyButtonSQ = Loader.ImageLoader("/ui/grey_button07.png");
         blueButtRec = Loader.ImageLoader("/ui/blueb1.png");

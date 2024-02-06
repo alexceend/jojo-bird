@@ -1,6 +1,7 @@
 package states;
 
 import graphics.Assets;
+import graphics.Text;
 import ui.Action;
 import ui.Button;
 
@@ -36,8 +37,8 @@ public class MenuState extends State{
 
     @Override
     public void draw(Graphics g) {
-        g.drawString("HOLA", 200,200);
-        g.drawImage(Assets.player, 100, 100, null);
+        Text.drawText(g, "Hola", new Point(200,200), true, Color.black, Assets.titleFontMedium);
+        g.drawImage(Assets.player, 200, 200, null);
         for(ui.Button b : buttons){
             b.draw(g);
         }
