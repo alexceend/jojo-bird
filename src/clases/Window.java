@@ -1,6 +1,8 @@
 package clases;
 
 import graphics.Assets;
+import input.Mouse;
+import input.MouseGUI;
 import states.MenuState;
 import states.State;
 
@@ -21,6 +23,8 @@ public class Window extends JFrame implements Runnable {
     private double delta = 0;
     private int AVERAGEFPS = FPS;
 
+    private MouseGUI mouseGUI = new MouseGUI();
+
     public Window() {
         super.setTitle("Jojo Bird");
         super.setSize(WIDTH, HEIGHT);
@@ -37,7 +41,11 @@ public class Window extends JFrame implements Runnable {
 
         //addMouseListener
 
+        canvas.addMouseListener(new Mouse());
+        canvas.addMouseListener(mouseGUI);
+        canvas.addMouseMotionListener(mouseGUI);
         super.add(canvas);
+
     }
 
     public static void main(String[] args) {
@@ -95,7 +103,7 @@ public class Window extends JFrame implements Runnable {
             time += (now - lastTime);
             lastTime = now;
 
-            if(delta >= 1){
+            if (delta >= 1) {
                 try {
                     update();
                 } catch (FileNotFoundException e) {
@@ -106,7 +114,7 @@ public class Window extends JFrame implements Runnable {
                 frames++;
             }
 
-            if(time >= 1000000000){
+            if (time >= 1000000000) {
                 AVERAGEFPS = frames;
                 frames = 0;
                 time = 0;

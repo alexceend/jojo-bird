@@ -9,6 +9,8 @@ public class Assets {
     public static BufferedImage player;
     public static BufferedImage orangeButtSQ, blueButtRec, greyButtonRec, greenCheckButt, redcrossButt, bluecrossButt, bluecheckButt, greyButtonSQ;
 
+    public static BufferedImage[] numbersImg = new BufferedImage[10];
+
     public static Font titleFontBig, titleFontMedium, titleFontTiny;
     public static Font normalFontBig, normalFontMedium, normalFontTiny;
 
