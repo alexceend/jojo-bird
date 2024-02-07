@@ -9,6 +9,9 @@ public class Constants {
     public static final double DELTAANGLE = 0.1;
 
     public static final double VEL = 2.0;
+    public static final double PLAYER_VELOCITY = 5.0;
+    public static final double COIN_VELOCITY = -10.0;
+    public static final double COIN_SPAWN_RATE = 2000;
 
     public static final String PLAY = "PLAY";
     public static final String EXIT = "EXIT";

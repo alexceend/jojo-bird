@@ -2,11 +2,13 @@ package states;
 
 import clases.Constants;
 import gameObjects.Chronometer;
+import gameObjects.Coin;
 import gameObjects.MovingObject;
 import gameObjects.Player;
 import graphics.Animation;
 import graphics.Assets;
 import graphics.Message;
+import math.Vector2D;
 
 import java.awt.*;
 import java.io.FileNotFoundException;
@@ -25,13 +27,16 @@ public class GameState extends State {
     private boolean gameOver = false;
 
     private int score = 0;
+    private static long lastCoinSpawned;
 
     public GameState() {
-        player = new Player(new Point(30, 200), Assets.player, this);
+        player = new Player(new Point(50, 200), Assets.player, this);
         for (MovingObject mo : new HashSet<>(movingObjects)) {
             mo.remove();
         }
         movingObjects.add(player);
+        generateCoin();
+        lastCoinSpawned = System.currentTimeMillis();
     }
 
     public void addScore(int val) {
@@ -51,6 +56,10 @@ public class GameState extends State {
             /*if ((mo instanceof Ball || mo instanceof Fly || mo instanceof Wasp) && isPosOutsideComponent(mo.getCenter())) {
                 movingObjects.remove(mo);
             }*/
+        }
+        if (System.currentTimeMillis() - lastCoinSpawned > Constants.COIN_SPAWN_RATE) {
+            generateCoin();
+            lastCoinSpawned = System.currentTimeMillis();
         }
     }
 
@@ -114,4 +123,12 @@ public class GameState extends State {
         gameOver = true;
     }
 
+    private void generateCoin() {
+        double x = Constants.WIDTH;
+        double y = Math.random() * Constants.HEIGHT;
+        movingObjects.add(new Coin(
+                new Point((int) x, (int) y),
+                new Vector2D(Constants.COIN_VELOCITY, 0),
+                Assets.coinSprite, this));
+    }
 }
