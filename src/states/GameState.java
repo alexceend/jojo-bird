@@ -45,6 +45,7 @@ public class GameState extends State {
 
     @Override
     public void update() throws FileNotFoundException {
+        System.out.println(score);
         //if(Player.paused) GameState.changeState(new PauseState(this));
         if (gameOver) {
             GameState.changeState(new MenuState());
@@ -53,6 +54,7 @@ public class GameState extends State {
         //collidesWith();
         for (MovingObject mo : new HashSet<>(movingObjects)) {
             mo.update();
+            if(mo instanceof Coin && isCoinOutsideComponent(mo.getCenter())) movingObjects.remove(mo);
             /*if ((mo instanceof Ball || mo instanceof Fly || mo instanceof Wasp) && isPosOutsideComponent(mo.getCenter())) {
                 movingObjects.remove(mo);
             }*/
@@ -61,6 +63,7 @@ public class GameState extends State {
             generateCoin();
             lastCoinSpawned = System.currentTimeMillis();
         }
+        collidesWith();
     }
 
     @Override
@@ -82,8 +85,8 @@ public class GameState extends State {
         }
     }
 
-    private boolean isPosOutsideComponent(Point pos) {
-        return pos.getX() > 800 || pos.getX() < 0 || pos.getY() > 800 || pos.getY() < 0;
+    private boolean isCoinOutsideComponent(Point pos) {
+        return pos.getX() < 0;
     }
 
     public HashSet<MovingObject> getMovingObjects() {
@@ -107,7 +110,10 @@ public class GameState extends State {
     }
 
     private void objectCollision(MovingObject a, MovingObject b) {
-
+        if(a instanceof Player && b instanceof Coin){
+            score+=1;
+            b.remove();
+        }
     }
 
     public void gameOver() {
