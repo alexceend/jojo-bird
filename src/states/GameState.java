@@ -46,7 +46,6 @@ public class GameState extends State {
     public void update() throws FileNotFoundException {
         //gameOverTimer.update();
         blockSpawnRate.update();
-        System.out.println(movingObjects.size());
         //if(Player.paused) GameState.changeState(new PauseState(this));
         if (gameOver) {
             GameState.changeState(new MenuState());

@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59f8b609-39dc-4b23-af48-875d108cfb70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/res/block.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/player2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gameObjects/Block.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/player.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/clases/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/clases/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameObjects/MovingObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameObjects/MovingObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clases/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/clases/Window.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/states/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/states/GameState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +24,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "alexceend"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="0e2ebf96-d1d9-4ef0-a577-f5c598563d0b" />
+        <option name="url" value="https://github.com/alexceend/jojo-bird.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
