@@ -68,7 +68,7 @@ public class Window extends JFrame implements Runnable {
         Graphics g = bs.getDrawGraphics();
 
         g.fillRect(0, 0, WIDTH, HEIGHT); //Limpiar pantalla a cada frame
-        g.setColor(Color.white); //Fondo de color de pantalla
+        g.setColor(Color.pink); //Fondo de color de pantalla
         g.fillRect(0, 0, WIDTH, HEIGHT);
 
         State.getCurrentState().draw(g);
