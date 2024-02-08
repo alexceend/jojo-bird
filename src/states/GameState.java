@@ -56,7 +56,7 @@ public class GameState extends State {
 
         for (MovingObject mo : new HashSet<>(movingObjects)) {
             mo.update();
-            if(mo instanceof Coin && isCoinOutsideComponent(mo.getCenter())) movingObjects.remove(mo);
+            if(mo instanceof Coin && isObjOutsideComponent(mo.getCenter())) movingObjects.remove(mo);
         }
         if (System.currentTimeMillis() - lastCoinSpawned > Constants.COIN_SPAWN_RATE) {
             generateCoin();
@@ -83,7 +83,7 @@ public class GameState extends State {
         }
     }
 
-    private boolean isCoinOutsideComponent(Point pos) {
+    private boolean isObjOutsideComponent(Point pos) {
         return pos.getX() < 0;
     }
 
