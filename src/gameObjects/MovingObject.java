@@ -21,6 +21,10 @@ public abstract class MovingObject extends GameObject {
         width = texture.getWidth();
     }
 
+    public Rectangle getBoundingBox() {
+        return new Rectangle((int) direction.getX(), (int) direction.getY(), width, height);
+    }
+
     public BufferedImage getTexture() {
         return texture;
     }

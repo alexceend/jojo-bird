@@ -7,7 +7,7 @@
     <list default="true" id="59f8b609-39dc-4b23-af48-875d108cfb70" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/clases/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/clases/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameObjects/MovingObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameObjects/MovingObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/states/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/states/GameState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,12 +25,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "alexceend"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;alexceend&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -111,6 +111,7 @@
       <workItem from="1707317229012" duration="3443000" />
       <workItem from="1707389473205" duration="28000" />
       <workItem from="1707389511339" duration="2463000" />
+      <workItem from="1707392655966" duration="1783000" />
     </task>
     <servers />
   </component>

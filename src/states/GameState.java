@@ -101,7 +101,14 @@ public class GameState extends State {
                 double distance = Math.sqrt(Math.pow(mo.getCenter().getX() - mo1.getCenter().getX(), 2) +
                         Math.pow(mo.getCenter().getY() - mo1.getCenter().getY(), 2));
 
-                if (distance < (double) mo.getTexture().getWidth() / 2 + (double) mo.getTexture().getHeight() / 2) {
+                /*if (distance < (double) mo.getTexture().getWidth() / 2 + (double) mo.getTexture().getHeight() / 2) {
+                    objectCollision(mo, mo1);
+                }
+*/
+                Rectangle rectangle1 = mo.getBoundingBox();
+                Rectangle rectangle2 = mo1.getBoundingBox();
+
+                if (rectangle1.intersects(rectangle2) && !(mo.equals(mo1))) {
                     objectCollision(mo, mo1);
                 }
             }
