@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59f8b609-39dc-4b23-af48-875d108cfb70" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/res/block.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/player2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gameObjects/Block.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Window.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Window.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/player.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clases/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/clases/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameObjects/MovingObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameObjects/MovingObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graphics/Assets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/states/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/states/GameState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +68,7 @@
       <recent name="C:\Users\Alex\Desktop\jojo-bird\src\ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alvar\Documents\Git\jojo-bird\res" />
       <recent name="C:\Users\Alex\Desktop\jojo-bird\res" />
       <recent name="C:\Users\Alex\Desktop\jojo-bird\res\player" />
       <recent name="C:\Users\Alex\Desktop\jojo-bird\src" />
@@ -94,6 +101,8 @@
       <workItem from="1707305780882" duration="4000" />
       <workItem from="1707305795658" duration="3689000" />
       <workItem from="1707317229012" duration="3443000" />
+      <workItem from="1707389473205" duration="28000" />
+      <workItem from="1707389511339" duration="2337000" />
     </task>
     <servers />
   </component>

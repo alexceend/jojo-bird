@@ -1,10 +1,7 @@
 package states;
 
 import clases.Constants;
-import gameObjects.Chronometer;
-import gameObjects.Coin;
-import gameObjects.MovingObject;
-import gameObjects.Player;
+import gameObjects.*;
 import graphics.Animation;
 import graphics.Assets;
 import graphics.Message;
@@ -14,6 +11,7 @@ import java.awt.*;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Random;
 
 public class GameState extends State {
 
@@ -23,6 +21,7 @@ public class GameState extends State {
     private ArrayList<Animation> animations = new ArrayList<Animation>();
 
     private Chronometer gameOverTimer = new Chronometer();
+    private Chronometer blockSpawnRate = new Chronometer();
 
     private boolean gameOver = false;
 
@@ -45,10 +44,11 @@ public class GameState extends State {
 
     @Override
     public void update() throws FileNotFoundException {
-        gameOverTimer.update();
-        System.out.println(score);
+        //gameOverTimer.update();
+        blockSpawnRate.update();
+        System.out.println(movingObjects.size());
         //if(Player.paused) GameState.changeState(new PauseState(this));
-        if (gameOver && !gameOverTimer.isRunning()) {
+        if (gameOver) {
             GameState.changeState(new MenuState());
         }
         player.update();
@@ -56,12 +56,14 @@ public class GameState extends State {
 
         for (MovingObject mo : new HashSet<>(movingObjects)) {
             mo.update();
-            if(mo instanceof Coin && isObjOutsideComponent(mo.getCenter())) movingObjects.remove(mo);
+            if ((mo instanceof Coin || mo instanceof Block) && isObjOutsideComponent(mo.getCenter()))
+                movingObjects.remove(mo);
         }
         if (System.currentTimeMillis() - lastCoinSpawned > Constants.COIN_SPAWN_RATE) {
             generateCoin();
             lastCoinSpawned = System.currentTimeMillis();
         }
+        if (!blockSpawnRate.isRunning()) generateBlock();
     }
 
     @Override
@@ -100,7 +102,7 @@ public class GameState extends State {
                 double distance = Math.sqrt(Math.pow(mo.getCenter().getX() - mo1.getCenter().getX(), 2) +
                         Math.pow(mo.getCenter().getY() - mo1.getCenter().getY(), 2));
 
-                if (distance < (double) mo.width / 2 + (double) mo.height / 2) {
+                if (distance < (double) mo.getTexture().getWidth() / 2 + (double) mo.getTexture().getHeight() / 2) {
                     objectCollision(mo, mo1);
                 }
             }
@@ -108,9 +110,12 @@ public class GameState extends State {
     }
 
     private void objectCollision(MovingObject a, MovingObject b) {
-        if(a instanceof Player && b instanceof Coin){
+        if (a instanceof Player && b instanceof Coin) {
             addScore(1);
             b.remove();
+        }
+        if (a instanceof Player && b instanceof Block) {
+            gameOver();
         }
     }
 
@@ -134,5 +139,21 @@ public class GameState extends State {
                 new Point((int) x, (int) y),
                 new Vector2D(Constants.COIN_VELOCITY, 0),
                 Assets.coinSprite, this));
+    }
+
+    private void generateBlock() {
+        blockSpawnRate.run(3500);
+        double x = Constants.WIDTH;
+        double y = (Math.random() * (Constants.HEIGHT - Constants.MINIMUM_BLOCK_SPACE)) - (double) Assets.blockSprite.getHeight() / 2;
+        double y2 = y + Constants.MINIMUM_BLOCK_SPACE + (double) Assets.blockSprite.getHeight();
+        movingObjects.add(new Block(
+                new Point((int) x, (int) y),
+                new Vector2D(Constants.BLOCK_VELOCITY, 0),
+                Assets.blockSprite, this));
+
+        movingObjects.add(new Block(
+                new Point((int) x, (int) y2),
+                new Vector2D(Constants.BLOCK_VELOCITY, 0),
+                Assets.blockSprite, this));
     }
 }

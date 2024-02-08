@@ -20,4 +20,8 @@ public abstract class MovingObject extends GameObject {
         height = texture.getHeight();
         width = texture.getWidth();
     }
+
+    public BufferedImage getTexture() {
+        return texture;
+    }
 }
