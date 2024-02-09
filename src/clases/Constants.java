@@ -14,7 +14,7 @@ public class Constants {
     public static final double COIN_SPAWN_RATE = 2000;
 
     public static final double BLOCK_VELOCITY = -7.0;
-    public static final double MINIMUM_BLOCK_SPACE = 150.0;
+    public static final double MINIMUM_BLOCK_SPACE = 200.0;
 
     public static final String PLAY = "PLAY";
     public static final String EXIT = "EXIT";

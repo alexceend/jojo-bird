@@ -7,6 +7,8 @@ import java.awt.image.BufferedImage;
 public class Assets {
 
     public static BufferedImage player, coinSprite, blockSprite;
+
+    public static BufferedImage[] bg;
     public static BufferedImage orangeButtSQ, blueButtRec, greyButtonRec, greenCheckButt, redcrossButt, bluecrossButt, bluecheckButt, greyButtonSQ;
 
     public static BufferedImage[] numbersImg = new BufferedImage[10];
@@ -20,6 +22,11 @@ public class Assets {
         player = Loader.ImageLoader("/player.png");
         coinSprite = Loader.ImageLoader("/coin.png");
         blockSprite = Loader.ImageLoader("/block.png");
+
+        for(int i = 0; i < bg.length; i++){
+            bg[i] = Loader.ImageLoader("/bg/" + i + ".png");
+        }
+
         orangeButtSQ = Loader.ImageLoader("/ui/orangeb1.png");
         greyButtonSQ = Loader.ImageLoader("/ui/grey_button07.png");
         blueButtRec = Loader.ImageLoader("/ui/blueb1.png");
@@ -38,5 +45,9 @@ public class Assets {
         normalFontBig = Loader.loadFont("/fonts/BubblyFrog.ttf", 42);
         normalFontMedium = Loader.loadFont("/fonts/BubblyFrog.ttf", 20);
         normalFontTiny = Loader.loadFont("/fonts/BubblyFrog.ttf", 13);
+
+        for(int i = 0; i < numbersImg.length; i++){
+            numbersImg[i] = Loader.ImageLoader("/numbers/" + i + ".png");
+        }
     }
 }

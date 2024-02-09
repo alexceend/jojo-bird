@@ -22,7 +22,10 @@ public abstract class MovingObject extends GameObject {
     }
 
     public Rectangle getBoundingBox() {
-        return new Rectangle((int) direction.getX(), (int) direction.getY(), width, height);
+        return new Rectangle((int) center.getX() - texture.getWidth()/ 2,
+                (int) center.getY() - texture.getHeight() / 2,
+                texture.getWidth(),
+                texture.getHeight());
     }
 
     public BufferedImage getTexture() {

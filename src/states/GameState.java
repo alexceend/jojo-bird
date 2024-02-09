@@ -11,7 +11,6 @@ import java.awt.*;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.Random;
 
 public class GameState extends State {
 
@@ -36,6 +35,11 @@ public class GameState extends State {
         movingObjects.add(player);
         generateCoin();
         lastCoinSpawned = System.currentTimeMillis();
+        animations.add(new Animation(
+                Assets.bg,
+                10,
+                new Point(Constants.WIDTH / 2,Constants.HEIGHT / 2)
+        ));
     }
 
     public void addScore(int val) {
@@ -82,6 +86,10 @@ public class GameState extends State {
                     (int) p.getX(), (int) p.getY(), null);
             p.setLocation(p.getX() + 20, p.getY());
         }
+        for(Animation a : animations) {
+            a.update();
+            g.drawImage(a.getCurrentFrame(),0,0,null);
+        }
     }
 
     private boolean isObjOutsideComponent(Point pos) {
@@ -101,10 +109,10 @@ public class GameState extends State {
                 double distance = Math.sqrt(Math.pow(mo.getCenter().getX() - mo1.getCenter().getX(), 2) +
                         Math.pow(mo.getCenter().getY() - mo1.getCenter().getY(), 2));
 
-                /*if (distance < (double) mo.getTexture().getWidth() / 2 + (double) mo.getTexture().getHeight() / 2) {
+                if (distance < (double) mo.getTexture().getWidth() / 2 + (double) mo.getTexture().getHeight() / 2) {
                     objectCollision(mo, mo1);
                 }
-*/
+
                 Rectangle rectangle1 = mo.getBoundingBox();
                 Rectangle rectangle2 = mo1.getBoundingBox();
 
@@ -126,14 +134,6 @@ public class GameState extends State {
     }
 
     public void gameOver() {
-        Message gameOverMsg = new Message(
-                new Point(Constants.WIDTH / 2, Constants.HEIGHT / 2),
-                true,
-                "GAME OVER",
-                Color.white,
-                true
-        );
-        messages.add(gameOverMsg);
         gameOverTimer.run(Constants.GAME_OVER_TIME);
         gameOver = true;
     }
