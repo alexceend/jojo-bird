@@ -16,7 +16,7 @@ public class Assets {
     public static Font titleFontBig, titleFontMedium, titleFontTiny;
     public static Font normalFontBig, normalFontMedium, normalFontTiny;
 
-    public static Clip explosion, playerShoot;
+    public static Clip explosion, playerShoot, coinSound;
 
     public static void init(){
         player = Loader.ImageLoader("/player.png");
@@ -38,6 +38,8 @@ public class Assets {
 
         explosion = Loader.loadSound("/sounds/explosion.wav");
         playerShoot = Loader.loadSound("/sounds/playerShoot.wav");
+        coinSound = Loader.loadSound("/sounds/coin.wav");
+
 
         titleFontBig = Loader.loadFont("/fonts/TOADFROG.ttf", 42);
         titleFontMedium = Loader.loadFont("/fonts/TOADFROG.ttf", 20);

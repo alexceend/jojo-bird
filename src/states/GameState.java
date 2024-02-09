@@ -28,6 +28,8 @@ public class GameState extends State {
     private int score = 0;
     private static long lastCoinSpawned;
 
+    private Sound coinSound = new Sound(Assets.coinSound);
+
     public GameState() {
         player = new Player(new Point(150, 200), Assets.player, this);
         for (MovingObject mo : new HashSet<>(movingObjects)) {
@@ -41,6 +43,7 @@ public class GameState extends State {
                 75,
                 new Point(Constants.WIDTH / 2, Constants.HEIGHT / 2)
         );
+        coinSound.changeVol(.1f);
     }
 
     public void addScore(int val) {
@@ -73,6 +76,7 @@ public class GameState extends State {
             lastCoinSpawned = System.currentTimeMillis();
         }
         if (!blockSpawnRate.isRunning()) generateBlock();
+        if(coinSound.getFramePosition() > 5000) coinSound.stop();
     }
 
     @Override
@@ -134,6 +138,7 @@ public class GameState extends State {
         if (a instanceof Player && b instanceof Coin) {
             addScore(1);
             b.remove();
+            coinSound.play();
         }
         if (a instanceof Player && b instanceof Block) {
             gameOver();
