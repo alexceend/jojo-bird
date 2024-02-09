@@ -18,6 +18,7 @@ public class GameState extends State {
     public static final HashSet<MovingObject> movingObjects = new HashSet<>();
     public static final HashSet<Message> messages = new HashSet<>();
     private ArrayList<Animation> animations = new ArrayList<Animation>();
+    private Animation bg;
 
     private Chronometer gameOverTimer = new Chronometer();
     private Chronometer blockSpawnRate = new Chronometer();
@@ -28,18 +29,18 @@ public class GameState extends State {
     private static long lastCoinSpawned;
 
     public GameState() {
-        player = new Player(new Point(50, 200), Assets.player, this);
+        player = new Player(new Point(150, 200), Assets.player, this);
         for (MovingObject mo : new HashSet<>(movingObjects)) {
             mo.remove();
         }
         movingObjects.add(player);
         generateCoin();
         lastCoinSpawned = System.currentTimeMillis();
-        animations.add(new Animation(
+        bg = new Animation(
                 Assets.bg,
-                10,
-                new Point(Constants.WIDTH / 2,Constants.HEIGHT / 2)
-        ));
+                75,
+                new Point(Constants.WIDTH / 2, Constants.HEIGHT / 2)
+        );
     }
 
     public void addScore(int val) {
@@ -50,6 +51,7 @@ public class GameState extends State {
     public void update() throws FileNotFoundException {
         //gameOverTimer.update();
         blockSpawnRate.update();
+        bg.update();
         //if(Player.paused) GameState.changeState(new PauseState(this));
         if (gameOver) {
             GameState.changeState(new MenuState());
@@ -62,6 +64,10 @@ public class GameState extends State {
             if ((mo instanceof Coin || mo instanceof Block) && isObjOutsideComponent(mo.getCenter()))
                 movingObjects.remove(mo);
         }
+
+        for (Animation a : animations) {
+            a.update();
+        }
         if (System.currentTimeMillis() - lastCoinSpawned > Constants.COIN_SPAWN_RATE) {
             generateCoin();
             lastCoinSpawned = System.currentTimeMillis();
@@ -71,6 +77,7 @@ public class GameState extends State {
 
     @Override
     public void draw(Graphics g) {
+        drawBG(g);
         Graphics2D g2d = (Graphics2D) g;
         player.draw(g);
         for (MovingObject mo : new HashSet<>(movingObjects)) mo.draw(g);
@@ -86,10 +93,10 @@ public class GameState extends State {
                     (int) p.getX(), (int) p.getY(), null);
             p.setLocation(p.getX() + 20, p.getY());
         }
-        for(Animation a : animations) {
-            a.update();
-            g.drawImage(a.getCurrentFrame(),0,0,null);
-        }
+    }
+
+    private void drawBG(Graphics g) {
+        g.drawImage(bg.getCurrentFrame(),0,0,null);
     }
 
     private boolean isObjOutsideComponent(Point pos) {

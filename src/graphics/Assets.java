@@ -8,7 +8,7 @@ public class Assets {
 
     public static BufferedImage player, coinSprite, blockSprite;
 
-    public static BufferedImage[] bg;
+    public static BufferedImage[] bg = new BufferedImage[7];
     public static BufferedImage orangeButtSQ, blueButtRec, greyButtonRec, greenCheckButt, redcrossButt, bluecrossButt, bluecheckButt, greyButtonSQ;
 
     public static BufferedImage[] numbersImg = new BufferedImage[10];

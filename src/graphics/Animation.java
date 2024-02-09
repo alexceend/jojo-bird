@@ -28,7 +28,10 @@ public class Animation {
         if (time > velocity) {
             time = 0;
             index++;
-            if (index >= frames.length) running = false;
+            if (index >= frames.length) {
+                running = false;
+                index = 0;
+            }
         }
     }
 
