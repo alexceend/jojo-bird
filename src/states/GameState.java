@@ -167,11 +167,11 @@ public class GameState extends State {
         movingObjects.add(new Block(
                 new Point((int) x, (int) y),
                 new Vector2D(Constants.BLOCK_VELOCITY, 0),
-                Assets.blockSprite, this));
+                Assets.blockDown, this));
 
         movingObjects.add(new Block(
                 new Point((int) x, (int) y2),
                 new Vector2D(Constants.BLOCK_VELOCITY, 0),
-                Assets.blockSprite, this));
+                Assets.blockUp, this));
     }
 }
