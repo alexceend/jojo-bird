@@ -6,7 +6,7 @@ import java.awt.image.BufferedImage;
 
 public class Assets {
 
-    public static BufferedImage player, coinSprite, blockSprite, blockUp, blockDown, title;
+    public static BufferedImage player, coinSprite, blockSprite, blockUp, blockDown, title, info;
 
     public static BufferedImage[] bg = new BufferedImage[7];
     public static BufferedImage orangeButtSQ, blueButtRec, greyButtonRec, greenCheckButt, redcrossButt, bluecrossButt, bluecheckButt, greyButtonSQ;
@@ -25,6 +25,7 @@ public class Assets {
         blockUp = Loader.ImageLoader("/blockup.png");
         blockDown = Loader.ImageLoader("/blockdown.png");
         title = Loader.ImageLoader("/title.png");
+        info = Loader.ImageLoader("/info.png");
 
         for(int i = 0; i < bg.length; i++){
             bg[i] = Loader.ImageLoader("/bg/" + i + ".png");

@@ -38,6 +38,7 @@ public class MenuState extends State{
     @Override
     public void draw(Graphics g) {
          g.drawImage(Assets.title, 190, 150, null);
+         g.drawImage(Assets.info, 400 - Assets.info.getWidth()/2, 500, null);
         for(ui.Button b : buttons){
             b.draw(g);
         }
