@@ -3,6 +3,7 @@ package clases;
 import graphics.Assets;
 import input.Mouse;
 import input.MouseGUI;
+import states.GameOverState;
 import states.MenuState;
 import states.State;
 
@@ -67,9 +68,12 @@ public class Window extends JFrame implements Runnable {
 
         Graphics g = bs.getDrawGraphics();
 
-        g.fillRect(0, 0, WIDTH, HEIGHT); //Limpiar pantalla a cada frame
-        g.setColor(Color.pink); //Fondo de color de pantalla
-        g.fillRect(0, 0, WIDTH, HEIGHT);
+
+        if(!(State.getCurrentState() instanceof GameOverState)){
+            g.fillRect(0, 0, WIDTH, HEIGHT); //Limpiar pantalla a cada frame
+            g.setColor(Color.pink); //Fondo de color de pantalla
+            g.fillRect(0, 0, WIDTH, HEIGHT);
+        }
 
         State.getCurrentState().draw(g);
 

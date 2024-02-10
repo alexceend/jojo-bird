@@ -25,12 +25,14 @@ public class GameState extends State {
 
     private boolean gameOver = false;
 
-    private int score = 0;
+    public static int score = 0;
+    public static int highscore = 0;
     private static long lastCoinSpawned;
 
     private Sound coinSound = new Sound(Assets.coinSound);
 
     public GameState() {
+        score = 0;
         player = new Player(new Point(150, 200), Assets.player, this);
         for (MovingObject mo : new HashSet<>(movingObjects)) {
             mo.remove();
@@ -57,7 +59,7 @@ public class GameState extends State {
         bg.update();
         //if(Player.paused) GameState.changeState(new PauseState(this));
         if (gameOver) {
-            GameState.changeState(new MenuState());
+            GameState.changeState(new GameOverState());
         }
         player.update();
         collidesWith();
@@ -148,6 +150,7 @@ public class GameState extends State {
     public void gameOver() {
         gameOverTimer.run(Constants.GAME_OVER_TIME);
         gameOver = true;
+        if(highscore < score) highscore = score;
     }
 
     private void generateCoin() {

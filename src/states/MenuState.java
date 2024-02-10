@@ -38,7 +38,6 @@ public class MenuState extends State{
     @Override
     public void draw(Graphics g) {
          g.drawImage(Assets.title, 190, 150, null);
-        Text.drawText(g, "Hola", new Point(200,200), true, Color.black, Assets.titleFontMedium);
         for(ui.Button b : buttons){
             b.draw(g);
         }
