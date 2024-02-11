@@ -1,5 +1,6 @@
 package states;
 
+import gameObjects.Sound;
 import graphics.Assets;
 import graphics.Text;
 import ui.Action;
@@ -12,6 +13,8 @@ import java.util.HashSet;
 public class GameOverState extends State{
 
     HashSet<Button> buttons = new HashSet<>();
+    private Sound deathSound = new Sound(Assets.deathSound);
+
 
     public GameOverState(){
         buttons.add(new Button(
@@ -41,6 +44,8 @@ public class GameOverState extends State{
                     }
                 }
         ));
+
+        deathSound.play();
     }
     @Override
     public void update() throws FileNotFoundException{

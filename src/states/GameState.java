@@ -30,7 +30,6 @@ public class GameState extends State {
     private static long lastCoinSpawned;
 
     private Sound coinSound = new Sound(Assets.coinSound);
-     private Sound deathSound = new Sound(Assets.deathSound);
 
     public GameState() {
         score = 0;
@@ -47,7 +46,6 @@ public class GameState extends State {
                 new Point(Constants.WIDTH / 2, Constants.HEIGHT / 2)
         );
         coinSound.changeVol(-6f);
-        deathSound.changeVol(6f);
         
     }
 
@@ -150,7 +148,6 @@ public class GameState extends State {
             coinSound.play();
         }
         if (a instanceof Player && b instanceof Block) {
-            deathSound.play();
             gameOver();
         }
     }

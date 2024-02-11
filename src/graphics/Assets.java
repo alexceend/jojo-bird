@@ -16,7 +16,7 @@ public class Assets {
     public static Font titleFontBig, titleFontMedium, titleFontTiny;
     public static Font normalFontBig, normalFontMedium, normalFontTiny;
 
-    public static Clip explosion, coinSound, theWorld, bgMusic;
+    public static Clip explosion, coinSound, theWorld, bgMusic, deathSound;
 
     public static void init(){
         player = Loader.ImageLoader("/playerr.png");
