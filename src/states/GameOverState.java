@@ -55,8 +55,8 @@ public class GameOverState extends State{
         for(Button b : buttons){
             b.draw(g);
         }
-        Text.drawText(g,"HIGHSCORE:", new Point(350,370), true, Color.black, Assets.titleFontMedium);
-        Point p = new Point(350, 390);
+        Text.drawText(g,"HIGHSCORE:", new Point(380,370), true, Color.black, Assets.titleFontMedium);
+        Point p = new Point(390, 390);
         String highscoreToString = Integer.toString(GameState.highscore);
         for (int i = 0; i < highscoreToString.length(); i++) {
             g.drawImage(Assets.numbersImg[Integer.parseInt(highscoreToString.substring(i, i + 1))],
@@ -64,8 +64,8 @@ public class GameOverState extends State{
             p.setLocation(p.getX() + 20, p.getY());
         }
 
-        Text.drawText(g,"SCORE:", new Point(350,450), true, Color.black, Assets.titleFontMedium);
-        Point p2 = new Point(350, 470);
+        Text.drawText(g,"SCORE:", new Point(380,450), true, Color.black, Assets.titleFontMedium);
+        Point p2 = new Point(390, 470);
         String scoreToString = Integer.toString(GameState.score);
         for (int i = 0; i < scoreToString.length(); i++) {
             g.drawImage(Assets.numbersImg[Integer.parseInt(scoreToString.substring(i, i + 1))],
