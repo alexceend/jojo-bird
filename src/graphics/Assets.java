@@ -44,7 +44,7 @@ public class Assets {
         coinSound = Loader.loadSound("/sounds/coin.wav");
         theWorld = Loader.loadSound("/sounds/pause.wav");
         bgMusic = Loader.loadSound("/sounds/bg.wav");
-
+        deathSound = Loader.loadSound("/sounds/death.wav");
 
         titleFontBig = Loader.loadFont("/fonts/vermin.otf", 42);
         titleFontMedium = Loader.loadFont("/fonts/vermin.otf", 20);
