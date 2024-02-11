@@ -1,6 +1,8 @@
 package clases;
 
+import gameObjects.Sound;
 import graphics.Assets;
+import input.Keyboard;
 import input.Mouse;
 import input.MouseGUI;
 import states.GameOverState;
@@ -25,6 +27,7 @@ public class Window extends JFrame implements Runnable {
     private int AVERAGEFPS = FPS;
 
     private MouseGUI mouseGUI = new MouseGUI();
+    private Keyboard keyboard = new Keyboard();
 
     public Window() {
         super.setTitle("Jojo Bird");
@@ -40,13 +43,11 @@ public class Window extends JFrame implements Runnable {
         canvas.setMinimumSize(d);
         canvas.setFocusable(true); //Para recibir entradas con el teclado
 
-        //addMouseListener
-
         canvas.addMouseListener(new Mouse());
+        canvas.addKeyListener(keyboard);
         canvas.addMouseListener(mouseGUI);
         canvas.addMouseMotionListener(mouseGUI);
         super.add(canvas);
-
     }
 
     public static void main(String[] args) {
@@ -55,6 +56,7 @@ public class Window extends JFrame implements Runnable {
     }
 
     private void update() throws FileNotFoundException {
+        keyboard.update();
         State.getCurrentState().update();
     }
 

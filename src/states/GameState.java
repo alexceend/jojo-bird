@@ -45,7 +45,7 @@ public class GameState extends State {
                 75,
                 new Point(Constants.WIDTH / 2, Constants.HEIGHT / 2)
         );
-        coinSound.changeVol(.1f);
+        coinSound.changeVol(-6f);
     }
 
     public void addScore(int val) {
@@ -78,7 +78,11 @@ public class GameState extends State {
             lastCoinSpawned = System.currentTimeMillis();
         }
         if (!blockSpawnRate.isRunning()) generateBlock();
+        if(Player.paused){
+            State.changeState(new PauseState(this));
+        }
         if(coinSound.getFramePosition() > 5000) coinSound.stop();
+
     }
 
     @Override
