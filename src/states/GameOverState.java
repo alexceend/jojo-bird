@@ -55,7 +55,7 @@ public class GameOverState extends State{
         for(Button b : buttons){
             b.draw(g);
         }
-        Text.drawText(g,"HIGHSCORE:", new Point(380,370), true, Color.black, Assets.titleFontMedium);
+        Text.drawText(g,"HIGHSCORE:", new Point(365,370), true, Color.black, Assets.titleFontMedium);
         Point p = new Point(390, 390);
         String highscoreToString = Integer.toString(GameState.highscore);
         for (int i = 0; i < highscoreToString.length(); i++) {
