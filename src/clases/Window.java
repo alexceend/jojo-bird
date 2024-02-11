@@ -30,7 +30,7 @@ public class Window extends JFrame implements Runnable {
     private Keyboard keyboard = new Keyboard();
 
     public Window() {
-        super.setTitle("Jojo Bird");
+        super.setTitle("JOJO'S BIZARRE ADVENTURE");
         super.setSize(WIDTH, HEIGHT);
         super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         super.setResizable(false);
