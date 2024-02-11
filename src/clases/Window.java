@@ -73,7 +73,7 @@ public class Window extends JFrame implements Runnable {
 
         if(!(State.getCurrentState() instanceof GameOverState)){
             g.fillRect(0, 0, WIDTH, HEIGHT); //Limpiar pantalla a cada frame
-            g.setColor(Color.pink); //Fondo de color de pantalla
+            g.setColor(new Color(188, 181, 215));; //Fondo de color de pantalla
             g.fillRect(0, 0, WIDTH, HEIGHT);
         }
 
