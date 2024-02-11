@@ -1,5 +1,6 @@
 package states;
 
+import gameObjects.Sound;
 import graphics.Assets;
 import graphics.Text;
 import ui.Action;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 public class MenuState extends State{
 
     ArrayList<ui.Button> buttons = new ArrayList<ui.Button>();
+    Sound bgMusic = new Sound(Assets.bgMusic);
 
     public MenuState(){
         buttons.add(new Button(
@@ -27,6 +29,9 @@ public class MenuState extends State{
                     }
                 }
         ));
+        bgMusic.loop();
+        bgMusic.changeVol(-20f);
+        bgMusic.play();
     }
     @Override
     public void update() throws FileNotFoundException {

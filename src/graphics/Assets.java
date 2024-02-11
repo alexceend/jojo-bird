@@ -16,7 +16,7 @@ public class Assets {
     public static Font titleFontBig, titleFontMedium, titleFontTiny;
     public static Font normalFontBig, normalFontMedium, normalFontTiny;
 
-    public static Clip explosion, playerShoot, coinSound, theWorld, bgMusic;
+    public static Clip explosion, coinSound, theWorld, bgMusic;
 
     public static void init(){
         player = Loader.ImageLoader("/playerr.png");
@@ -41,10 +41,9 @@ public class Assets {
         bluecheckButt = Loader.ImageLoader("/ui/blue_boxCheckmark.png");
 
         explosion = Loader.loadSound("/sounds/explosion.wav");
-        playerShoot = Loader.loadSound("/sounds/playerShoot.wav");
         coinSound = Loader.loadSound("/sounds/coin.wav");
         theWorld = Loader.loadSound("/sounds/pause.wav");
-        //bgMusic = Loader.loadSound("/sounds/bg.wav");
+        bgMusic = Loader.loadSound("/sounds/bg.wav");
 
 
         titleFontBig = Loader.loadFont("/fonts/vermin.otf", 42);
