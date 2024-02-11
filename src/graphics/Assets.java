@@ -47,9 +47,9 @@ public class Assets {
         //bgMusic = Loader.loadSound("/sounds/bg.wav");
 
 
-        titleFontBig = Loader.loadFont("/fonts/TOADFROG.ttf", 42);
-        titleFontMedium = Loader.loadFont("/fonts/TOADFROG.ttf", 20);
-        titleFontTiny = Loader.loadFont("/fonts/TOADFROG.ttf", 13);
+        titleFontBig = Loader.loadFont("/fonts/vermin.otf", 42);
+        titleFontMedium = Loader.loadFont("/fonts/vermin.otf", 20);
+        titleFontTiny = Loader.loadFont("/fonts/vermin.otf", 13);
         normalFontBig = Loader.loadFont("/fonts/BubblyFrog.ttf", 42);
         normalFontMedium = Loader.loadFont("/fonts/BubblyFrog.ttf", 20);
         normalFontTiny = Loader.loadFont("/fonts/BubblyFrog.ttf", 13);
