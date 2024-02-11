@@ -17,7 +17,7 @@ public class MenuState extends State{
         buttons.add(new Button(
                 Assets.greyButtonRec,
                 Assets.blueButtRec,
-                325,
+                315,
                 440,
                 "PLAY",
                 new Action() {
